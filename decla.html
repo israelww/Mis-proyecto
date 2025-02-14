@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: pink;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: rgb(126, 0, 128);
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi Valentín?</h1>
+        <button id="yes" onclick="window.location.href='respuesta.html'">Sí</button>
+        <button id="no">No</button>
+    </div>
+    
+    <script>
+        const noButton = document.getElementById("no");
+        noButton.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
